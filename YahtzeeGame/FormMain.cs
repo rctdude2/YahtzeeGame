@@ -8,12 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace YahtzeeGame
-{
-    public partial class FormMain : Form
-    {
-        public FormMain()
-        {
+namespace YahtzeeGame {
+    public partial class FormMain : Form {
+        public FormMain() {
             InitializeComponent();
         }
     }
