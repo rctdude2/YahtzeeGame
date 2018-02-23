@@ -19,9 +19,5 @@ namespace YahtzeeGame {
         public int Next(int low, int high) {
             return random.Next(low, high);
         }
-
-        public void NextBytes(byte[] buffer) {
-            random.NextBytes(buffer);
-        }
     }
 }

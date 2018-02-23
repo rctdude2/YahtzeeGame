@@ -57,7 +57,7 @@ namespace YahtzeeGame {
             }
 
             for (int i = 0; i < dieRollCount.Count; i++) {
-                scorecard.ScoreSectionUpper[(YahtzeeScorecard.Upper)i] = dieRollCount[i];
+                scorecard.ScoreSectionUpper[(YahtzeeScorecard.Upper)i] = dieRollCount[i] * (i + 1);
             }
 
             // Three of a Kind
@@ -67,6 +67,7 @@ namespace YahtzeeGame {
 
             // Four of a Kind
             if (dieRollCount.Contains(4)) {
+                scorecard.ScoreSectionLower[YahtzeeScorecard.Lower.ThreeOfAKind] = SumAllDice();
                 scorecard.ScoreSectionLower[YahtzeeScorecard.Lower.FourOfAKind] = SumAllDice();
             }
 
@@ -92,6 +93,8 @@ namespace YahtzeeGame {
 
             // Yahtzee
             if (dieRollCount.Contains(5)) {
+                scorecard.ScoreSectionLower[YahtzeeScorecard.Lower.ThreeOfAKind] = SumAllDice();
+                scorecard.ScoreSectionLower[YahtzeeScorecard.Lower.FourOfAKind] = SumAllDice();
                 scorecard.ScoreSectionLower[YahtzeeScorecard.Lower.Yahtzee] = YahtzeeScorecard.SCORE_YAHTZEE;
             }
 

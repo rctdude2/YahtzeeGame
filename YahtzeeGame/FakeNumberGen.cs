@@ -1,5 +1,5 @@
 ﻿namespace YahtzeeGame {
-    class FakeNumberGen {
+    public class FakeNumberGen : IRNG {
         private int[] numbers;
         private int currentNum;
 

@@ -3,6 +3,5 @@
         int Next();
         int Next(int high);
         int Next(int low, int high);
-        void NextBytes(byte[] buffer);
     }
 }
