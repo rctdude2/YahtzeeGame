@@ -40,7 +40,6 @@
             this.EDiceKeep4 = new System.Windows.Forms.CheckBox();
             this.EDiceKeep5 = new System.Windows.Forms.CheckBox();
             this.EDiceRollButton = new System.Windows.Forms.Button();
-            this.EDiceRollNumber = new System.Windows.Forms.Label();
             this.EDiceDieGroup = new System.Windows.Forms.Panel();
             this.EScoresTabGroup = new System.Windows.Forms.TabControl();
             this.EScoresTabUpper = new System.Windows.Forms.TabPage();
@@ -203,20 +202,11 @@
             // 
             this.EDiceRollButton.Location = new System.Drawing.Point(12, 106);
             this.EDiceRollButton.Name = "EDiceRollButton";
-            this.EDiceRollButton.Size = new System.Drawing.Size(106, 50);
+            this.EDiceRollButton.Size = new System.Drawing.Size(275, 50);
             this.EDiceRollButton.TabIndex = 2;
             this.EDiceRollButton.Text = "Roll";
             this.EDiceRollButton.UseVisualStyleBackColor = true;
             this.EDiceRollButton.Click += new System.EventHandler(this.EDiceRollButton_Click);
-            // 
-            // EDiceRollNumber
-            // 
-            this.EDiceRollNumber.AutoSize = true;
-            this.EDiceRollNumber.Location = new System.Drawing.Point(124, 106);
-            this.EDiceRollNumber.Name = "EDiceRollNumber";
-            this.EDiceRollNumber.Size = new System.Drawing.Size(34, 13);
-            this.EDiceRollNumber.TabIndex = 3;
-            this.EDiceRollNumber.Text = "Roll 0";
             // 
             // EDiceDieGroup
             // 
@@ -237,7 +227,7 @@
             this.EScoresTabGroup.Location = new System.Drawing.Point(293, 27);
             this.EScoresTabGroup.Name = "EScoresTabGroup";
             this.EScoresTabGroup.SelectedIndex = 0;
-            this.EScoresTabGroup.Size = new System.Drawing.Size(179, 322);
+            this.EScoresTabGroup.Size = new System.Drawing.Size(179, 242);
             this.EScoresTabGroup.TabIndex = 6;
             // 
             // EScoresTabUpper
@@ -252,7 +242,7 @@
             this.EScoresTabUpper.Location = new System.Drawing.Point(4, 22);
             this.EScoresTabUpper.Name = "EScoresTabUpper";
             this.EScoresTabUpper.Padding = new System.Windows.Forms.Padding(3);
-            this.EScoresTabUpper.Size = new System.Drawing.Size(171, 296);
+            this.EScoresTabUpper.Size = new System.Drawing.Size(171, 216);
             this.EScoresTabUpper.TabIndex = 0;
             this.EScoresTabUpper.Text = "Upper: 0";
             this.EScoresTabUpper.UseVisualStyleBackColor = true;
@@ -397,7 +387,7 @@
             this.EScoresTabLower.Location = new System.Drawing.Point(4, 22);
             this.EScoresTabLower.Name = "EScoresTabLower";
             this.EScoresTabLower.Padding = new System.Windows.Forms.Padding(3);
-            this.EScoresTabLower.Size = new System.Drawing.Size(171, 296);
+            this.EScoresTabLower.Size = new System.Drawing.Size(171, 216);
             this.EScoresTabLower.TabIndex = 1;
             this.EScoresTabLower.Text = "Lower: 0";
             this.EScoresTabLower.UseVisualStyleBackColor = true;
@@ -607,11 +597,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 361);
+            this.ClientSize = new System.Drawing.Size(484, 281);
             this.Controls.Add(this.EDiceKeepGroup);
             this.Controls.Add(this.EScoresTabGroup);
             this.Controls.Add(this.EDiceDieGroup);
-            this.Controls.Add(this.EDiceRollNumber);
             this.Controls.Add(this.EDiceRollButton);
             this.Controls.Add(this.EMainMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -656,7 +645,6 @@
         private System.Windows.Forms.CheckBox EDiceKeep4;
         private System.Windows.Forms.CheckBox EDiceKeep5;
         private System.Windows.Forms.Button EDiceRollButton;
-        private System.Windows.Forms.Label EDiceRollNumber;
         private System.Windows.Forms.Panel EDiceDieGroup;
         private System.Windows.Forms.TabControl EScoresTabGroup;
         private System.Windows.Forms.TabPage EScoresTabUpper;

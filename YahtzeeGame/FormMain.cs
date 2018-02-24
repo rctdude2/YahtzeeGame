@@ -24,7 +24,7 @@ namespace YahtzeeGame {
                 ctrl.Image = Properties.Resources.die0;
             }
             dice.RollCount = 0;
-            EDiceRollNumber.Text = $"Roll {dice.RollCount}";
+            this.Text = "Yahtzee";
             foreach (CheckBox ctrl in EDiceKeepGroup.Controls) {
                 ctrl.Checked = false;
             }
@@ -75,7 +75,7 @@ namespace YahtzeeGame {
             if (dice.CanRoll()) {
                 dice.Roll();
                 YahtzeeScorecard scores = dice.CalculateScores();
-                EDiceRollNumber.Text = $"Roll {dice.RollCount}";
+                this.Text = $"Yahtzee - Roll {dice.RollCount}";
 
                 int i = 0;
                 foreach (PictureBox ctrl in EDiceDieGroup.Controls) {
