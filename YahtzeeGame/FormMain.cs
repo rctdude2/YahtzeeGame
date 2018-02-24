@@ -87,6 +87,27 @@ namespace YahtzeeGame {
                 if (EScoresUpperSixesButton.Enabled) {
                     EScoresUpperSixes.Text = scores.ScoreSectionUpper[YahtzeeScorecard.Upper.Sixes].ToString();
                 }
+                if (EScoresLowerThreeKindButton.Enabled) {
+                    EScoresLowerThreeKind.Text = scores.ScoreSectionLower[YahtzeeScorecard.Lower.ThreeOfAKind].ToString();
+                }
+                if (EScoresLowerFourKindButton.Enabled) {
+                    EScoresLowerFourKind.Text = scores.ScoreSectionLower[YahtzeeScorecard.Lower.FourOfAKind].ToString();
+                }
+                if (EScoresLowerFullHouseButton.Enabled) {
+                    EScoresLowerFullHouse.Text = scores.ScoreSectionLower[YahtzeeScorecard.Lower.FullHouse].ToString();
+                }
+                if (EScoresLowerSmallStraightButton.Enabled) {
+                    EScoresLowerSmallStraight.Text = scores.ScoreSectionLower[YahtzeeScorecard.Lower.SmallStraight].ToString();
+                }
+                if (EScoresLowerLargeStraightButton.Enabled) {
+                    EScoresLowerLargeStraight.Text = scores.ScoreSectionLower[YahtzeeScorecard.Lower.LargeStraight].ToString();
+                }
+                if (EScoresLowerYahtzeeButton.Enabled) {
+                    EScoresLowerYahtzee.Text = scores.ScoreSectionLower[YahtzeeScorecard.Lower.Yahtzee].ToString();
+                }
+                if (EScoresLowerChanceButton.Enabled) {
+                    EScoresLowerChance.Text = scores.ScoreSectionLower[YahtzeeScorecard.Lower.Chance].ToString();
+                }
             }
         }
 
@@ -130,6 +151,69 @@ namespace YahtzeeGame {
             EScoresTabUpper.Text = $"Upper: {scorecard.ScoreTotalUpper}";
             EScoresUpperSixesButton.Enabled = false;
             ResetRoll();
+        }
+
+        private void EScoresUpperThreeKindButton_Click(object sender, EventArgs e) {
+            scorecard.ScoreSectionLower[YahtzeeScorecard.Lower.ThreeOfAKind] = dice.CalculateScores().ScoreSectionLower[YahtzeeScorecard.Lower.ThreeOfAKind];
+            EScoresTabLower.Text = $"Lower: {scorecard.ScoreTotalLower}";
+            EScoresLowerThreeKindButton.Enabled = false;
+            ResetRoll();
+        }
+
+        private void EScoresLowerFourKindButton_Click(object sender, EventArgs e) {
+            scorecard.ScoreSectionLower[YahtzeeScorecard.Lower.FourOfAKind] = dice.CalculateScores().ScoreSectionLower[YahtzeeScorecard.Lower.FourOfAKind];
+            EScoresTabLower.Text = $"Lower: {scorecard.ScoreTotalLower}";
+            EScoresLowerFourKindButton.Enabled = false;
+            ResetRoll();
+        }
+
+        private void EScoresLowerFullHouseButton_Click(object sender, EventArgs e) {
+            scorecard.ScoreSectionLower[YahtzeeScorecard.Lower.FullHouse] = dice.CalculateScores().ScoreSectionLower[YahtzeeScorecard.Lower.FullHouse];
+            EScoresTabLower.Text = $"Lower: {scorecard.ScoreTotalLower}";
+            EScoresLowerFullHouseButton.Enabled = false;
+            ResetRoll();
+        }
+
+        private void EScoresLowerSmallStraightButton_Click(object sender, EventArgs e) {
+            scorecard.ScoreSectionLower[YahtzeeScorecard.Lower.SmallStraight] = dice.CalculateScores().ScoreSectionLower[YahtzeeScorecard.Lower.SmallStraight];
+            EScoresTabLower.Text = $"Lower: {scorecard.ScoreTotalLower}";
+            EScoresLowerSmallStraightButton.Enabled = false;
+            ResetRoll();
+        }
+
+        private void EScoresLowerLargeStraightButton_Click(object sender, EventArgs e) {
+            scorecard.ScoreSectionLower[YahtzeeScorecard.Lower.LargeStraight] = dice.CalculateScores().ScoreSectionLower[YahtzeeScorecard.Lower.LargeStraight];
+            EScoresTabLower.Text = $"Lower: {scorecard.ScoreTotalLower}";
+            EScoresLowerLargeStraightButton.Enabled = false;
+            ResetRoll();
+        }
+
+        private void EScoresLowerYahtzeeButton_Click(object sender, EventArgs e) {
+            scorecard.ScoreSectionLower[YahtzeeScorecard.Lower.Yahtzee] = dice.CalculateScores().ScoreSectionLower[YahtzeeScorecard.Lower.Yahtzee];
+            EScoresTabLower.Text = $"Lower: {scorecard.ScoreTotalLower}";
+            EScoresLowerYahtzeeButton.Enabled = false;
+            ResetRoll();
+        }
+
+        private void EScoresLowerChanceButton_Click(object sender, EventArgs e) {
+            scorecard.ScoreSectionLower[YahtzeeScorecard.Lower.Chance] = dice.CalculateScores().ScoreSectionLower[YahtzeeScorecard.Lower.Chance];
+            EScoresTabLower.Text = $"Lower: {scorecard.ScoreTotalLower}";
+            EScoresLowerChanceButton.Enabled = false;
+            ResetRoll();
+        }
+
+        private void EMainMenuItemsFileExit_Click(object sender, EventArgs e) {
+            DialogResult result = MessageBox.Show("Are you sure you want to quit?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.None, MessageBoxDefaultButton.Button2);
+            if (result == DialogResult.Yes) {
+                Application.Exit();
+            }
+        }
+
+        private void EMainMenuItemsGameNewGame_Click(object sender, EventArgs e) {
+            DialogResult result = MessageBox.Show("Are you sure you want to start a new game?", "New Game", MessageBoxButtons.YesNo, MessageBoxIcon.None, MessageBoxDefaultButton.Button2);
+            if (result == DialogResult.Yes) {
+                ResetGame();
+            }
         }
     }
 }
