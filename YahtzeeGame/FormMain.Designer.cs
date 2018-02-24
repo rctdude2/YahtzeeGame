@@ -41,17 +41,30 @@
             this.EDiceKeep5 = new System.Windows.Forms.CheckBox();
             this.EDiceRoll = new System.Windows.Forms.Button();
             this.EDiceRollNumber = new System.Windows.Forms.Label();
+            this.EDiceDieGroup = new System.Windows.Forms.Panel();
+            this.EScoresTabGroup = new System.Windows.Forms.TabControl();
+            this.EScoresTabUpper = new System.Windows.Forms.TabPage();
+            this.EScoresTabLower = new System.Windows.Forms.TabPage();
+            this.EScoresUpperAces = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.EDiceDie1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EDiceDie2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EDiceDie3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EDiceDie4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EDiceDie5)).BeginInit();
+            this.EDiceDieGroup.SuspendLayout();
+            this.EScoresTabGroup.SuspendLayout();
+            this.EScoresTabUpper.SuspendLayout();
             this.SuspendLayout();
             // 
             // EDiceDie1
             // 
             this.EDiceDie1.Image = global::YahtzeeGame.Properties.Resources.die0;
-            this.EDiceDie1.Location = new System.Drawing.Point(12, 12);
+            this.EDiceDie1.Location = new System.Drawing.Point(0, 0);
             this.EDiceDie1.Name = "EDiceDie1";
             this.EDiceDie1.Size = new System.Drawing.Size(50, 50);
             this.EDiceDie1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -61,7 +74,7 @@
             // EDiceDie2
             // 
             this.EDiceDie2.Image = global::YahtzeeGame.Properties.Resources.die0;
-            this.EDiceDie2.Location = new System.Drawing.Point(68, 12);
+            this.EDiceDie2.Location = new System.Drawing.Point(56, 0);
             this.EDiceDie2.Name = "EDiceDie2";
             this.EDiceDie2.Size = new System.Drawing.Size(50, 50);
             this.EDiceDie2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -71,7 +84,7 @@
             // EDiceDie3
             // 
             this.EDiceDie3.Image = global::YahtzeeGame.Properties.Resources.die0;
-            this.EDiceDie3.Location = new System.Drawing.Point(124, 12);
+            this.EDiceDie3.Location = new System.Drawing.Point(112, 0);
             this.EDiceDie3.Name = "EDiceDie3";
             this.EDiceDie3.Size = new System.Drawing.Size(50, 50);
             this.EDiceDie3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -81,7 +94,7 @@
             // EDiceDie4
             // 
             this.EDiceDie4.Image = global::YahtzeeGame.Properties.Resources.die0;
-            this.EDiceDie4.Location = new System.Drawing.Point(180, 12);
+            this.EDiceDie4.Location = new System.Drawing.Point(168, 0);
             this.EDiceDie4.Name = "EDiceDie4";
             this.EDiceDie4.Size = new System.Drawing.Size(50, 50);
             this.EDiceDie4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -91,7 +104,7 @@
             // EDiceDie5
             // 
             this.EDiceDie5.Image = global::YahtzeeGame.Properties.Resources.die0;
-            this.EDiceDie5.Location = new System.Drawing.Point(236, 12);
+            this.EDiceDie5.Location = new System.Drawing.Point(224, 0);
             this.EDiceDie5.Name = "EDiceDie5";
             this.EDiceDie5.Size = new System.Drawing.Size(50, 50);
             this.EDiceDie5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -172,11 +185,115 @@
             this.EDiceRollNumber.TabIndex = 3;
             this.EDiceRollNumber.Text = "Roll 0";
             // 
+            // EDiceDieGroup
+            // 
+            this.EDiceDieGroup.Controls.Add(this.EDiceDie1);
+            this.EDiceDieGroup.Controls.Add(this.EDiceDie2);
+            this.EDiceDieGroup.Controls.Add(this.EDiceDie3);
+            this.EDiceDieGroup.Controls.Add(this.EDiceDie4);
+            this.EDiceDieGroup.Controls.Add(this.EDiceDie5);
+            this.EDiceDieGroup.Location = new System.Drawing.Point(12, 12);
+            this.EDiceDieGroup.Name = "EDiceDieGroup";
+            this.EDiceDieGroup.Size = new System.Drawing.Size(274, 50);
+            this.EDiceDieGroup.TabIndex = 5;
+            // 
+            // EScoresTabGroup
+            // 
+            this.EScoresTabGroup.Controls.Add(this.EScoresTabUpper);
+            this.EScoresTabGroup.Controls.Add(this.EScoresTabLower);
+            this.EScoresTabGroup.Location = new System.Drawing.Point(293, 12);
+            this.EScoresTabGroup.Name = "EScoresTabGroup";
+            this.EScoresTabGroup.SelectedIndex = 0;
+            this.EScoresTabGroup.Size = new System.Drawing.Size(179, 337);
+            this.EScoresTabGroup.TabIndex = 6;
+            // 
+            // EScoresTabUpper
+            // 
+            this.EScoresTabUpper.Controls.Add(this.button5);
+            this.EScoresTabUpper.Controls.Add(this.button4);
+            this.EScoresTabUpper.Controls.Add(this.button3);
+            this.EScoresTabUpper.Controls.Add(this.button2);
+            this.EScoresTabUpper.Controls.Add(this.button1);
+            this.EScoresTabUpper.Controls.Add(this.EScoresUpperAces);
+            this.EScoresTabUpper.Location = new System.Drawing.Point(4, 22);
+            this.EScoresTabUpper.Name = "EScoresTabUpper";
+            this.EScoresTabUpper.Padding = new System.Windows.Forms.Padding(3);
+            this.EScoresTabUpper.Size = new System.Drawing.Size(171, 311);
+            this.EScoresTabUpper.TabIndex = 0;
+            this.EScoresTabUpper.Text = "Upper: 0";
+            this.EScoresTabUpper.UseVisualStyleBackColor = true;
+            // 
+            // EScoresTabLower
+            // 
+            this.EScoresTabLower.Location = new System.Drawing.Point(4, 22);
+            this.EScoresTabLower.Name = "EScoresTabLower";
+            this.EScoresTabLower.Padding = new System.Windows.Forms.Padding(3);
+            this.EScoresTabLower.Size = new System.Drawing.Size(171, 311);
+            this.EScoresTabLower.TabIndex = 1;
+            this.EScoresTabLower.Text = "Lower: 0";
+            this.EScoresTabLower.UseVisualStyleBackColor = true;
+            // 
+            // EScoresUpperAces
+            // 
+            this.EScoresUpperAces.Location = new System.Drawing.Point(6, 6);
+            this.EScoresUpperAces.Name = "EScoresUpperAces";
+            this.EScoresUpperAces.Size = new System.Drawing.Size(159, 23);
+            this.EScoresUpperAces.TabIndex = 0;
+            this.EScoresUpperAces.Text = "Aces: 0";
+            this.EScoresUpperAces.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(6, 35);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(159, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Twos: 0";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(6, 64);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(159, 23);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "Threes: 0";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(6, 93);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(159, 23);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "Fours: 0";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(6, 122);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(159, 23);
+            this.button4.TabIndex = 0;
+            this.button4.Text = "Fives: 0";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(6, 151);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(159, 23);
+            this.button5.TabIndex = 0;
+            this.button5.Text = "Sixes: 0";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 361);
+            this.Controls.Add(this.EScoresTabGroup);
+            this.Controls.Add(this.EDiceDieGroup);
             this.Controls.Add(this.EDiceRollNumber);
             this.Controls.Add(this.EDiceRoll);
             this.Controls.Add(this.EDiceKeep5);
@@ -184,11 +301,6 @@
             this.Controls.Add(this.EDiceKeep3);
             this.Controls.Add(this.EDiceKeep2);
             this.Controls.Add(this.EDiceKeep1);
-            this.Controls.Add(this.EDiceDie5);
-            this.Controls.Add(this.EDiceDie4);
-            this.Controls.Add(this.EDiceDie3);
-            this.Controls.Add(this.EDiceDie2);
-            this.Controls.Add(this.EDiceDie1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -199,6 +311,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.EDiceDie3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EDiceDie4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EDiceDie5)).EndInit();
+            this.EDiceDieGroup.ResumeLayout(false);
+            this.EDiceDieGroup.PerformLayout();
+            this.EScoresTabGroup.ResumeLayout(false);
+            this.EScoresTabUpper.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,6 +334,16 @@
         private System.Windows.Forms.CheckBox EDiceKeep5;
         private System.Windows.Forms.Button EDiceRoll;
         private System.Windows.Forms.Label EDiceRollNumber;
+        private System.Windows.Forms.Panel EDiceDieGroup;
+        private System.Windows.Forms.TabControl EScoresTabGroup;
+        private System.Windows.Forms.TabPage EScoresTabUpper;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button EScoresUpperAces;
+        private System.Windows.Forms.TabPage EScoresTabLower;
     }
 }
 
