@@ -24,10 +24,13 @@ namespace YahtzeeGame {
             dice = new List<int>() { 0, 0, 0, 0, 0 };
         }
 
+        public bool CanRoll() {
+            return (RollCount < 3);
+        }
+
         public void Roll() {
-            RollCount++;
-            
-            if (RollCount <= 3) {
+           if (CanRoll()) {
+                RollCount++;
                 bool[] diceToHold = new bool[] { HoldDie1, HoldDie2, HoldDie3, HoldDie4, HoldDie5 };
 
                 for (int i = 0; i < dice.Count; i++) {
