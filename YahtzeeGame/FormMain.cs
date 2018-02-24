@@ -20,48 +20,23 @@ namespace YahtzeeGame {
         }
 
         private void EDiceKeep1_CheckedChanged(object sender, EventArgs e) {
-            if (EDiceKeep1.CheckState == CheckState.Checked) {
-                dice.HoldDie1 = true;
-            }
-            else {
-                dice.HoldDie1 = false;
-            }
+            dice.HoldDie1 = EDiceKeep1.CheckState == CheckState.Checked ? true : false;
         }
 
         private void EDiceKeep2_CheckedChanged(object sender, EventArgs e) {
-            if (EDiceKeep2.CheckState == CheckState.Checked) {
-                dice.HoldDie2 = true;
-            }
-            else {
-                dice.HoldDie2 = false;
-            }
+            dice.HoldDie2 = EDiceKeep2.CheckState == CheckState.Checked ? true : false;
         }
 
         private void EDiceKeep3_CheckedChanged(object sender, EventArgs e) {
-            if (EDiceKeep3.CheckState == CheckState.Checked) {
-                dice.HoldDie3 = true;
-            }
-            else {
-                dice.HoldDie3 = false;
-            }
+            dice.HoldDie3 = EDiceKeep3.CheckState == CheckState.Checked ? true : false;
         }
 
         private void EDiceKeep4_CheckedChanged(object sender, EventArgs e) {
-            if (EDiceKeep4.CheckState == CheckState.Checked) {
-                dice.HoldDie4 = true;
-            }
-            else {
-                dice.HoldDie4 = false;
-            }
+            dice.HoldDie4 = EDiceKeep4.CheckState == CheckState.Checked ? true : false;
         }
 
         private void EDiceKeep5_CheckedChanged(object sender, EventArgs e) {
-            if (EDiceKeep5.CheckState == CheckState.Checked) {
-                dice.HoldDie5 = true;
-            }
-            else {
-                dice.HoldDie5 = false;
-            }
+            dice.HoldDie5 = EDiceKeep5.CheckState == CheckState.Checked ? true : false;
         }
 
         private void EDiceRoll_Click(object sender, EventArgs e) {
