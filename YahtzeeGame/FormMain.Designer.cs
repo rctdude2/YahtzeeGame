@@ -582,6 +582,7 @@
             // EMainMenuItemsFileExit
             // 
             this.EMainMenuItemsFileExit.Name = "EMainMenuItemsFileExit";
+            this.EMainMenuItemsFileExit.ShortcutKeyDisplayString = "";
             this.EMainMenuItemsFileExit.Size = new System.Drawing.Size(152, 22);
             this.EMainMenuItemsFileExit.Text = "Exit";
             this.EMainMenuItemsFileExit.Click += new System.EventHandler(this.EMainMenuItemsFileExit_Click);
@@ -597,7 +598,8 @@
             // EMainMenuItemsGameNewGame
             // 
             this.EMainMenuItemsGameNewGame.Name = "EMainMenuItemsGameNewGame";
-            this.EMainMenuItemsGameNewGame.Size = new System.Drawing.Size(152, 22);
+            this.EMainMenuItemsGameNewGame.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
+            this.EMainMenuItemsGameNewGame.Size = new System.Drawing.Size(174, 22);
             this.EMainMenuItemsGameNewGame.Text = "New Game";
             this.EMainMenuItemsGameNewGame.Click += new System.EventHandler(this.EMainMenuItemsGameNewGame_Click);
             // 

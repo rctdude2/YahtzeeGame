@@ -28,6 +28,7 @@ namespace YahtzeeGame {
             foreach (CheckBox ctrl in EDiceKeepGroup.Controls) {
                 ctrl.Checked = false;
             }
+            EDiceRollButton.Enabled = true;
         }
 
         private void ResetGame() {
@@ -36,6 +37,18 @@ namespace YahtzeeGame {
             dice = new YahtzeeDice();
             EScoresTabUpper.Text = "Upper: 0";
             EScoresTabLower.Text = "Lower: 0";
+            foreach (Control ctrl in EScoresTabUpper.Controls) {
+                ctrl.Enabled = true;
+            }
+            foreach (Control ctrl in EScoresTabLower.Controls) {
+                ctrl.Enabled = true;
+            }
+            foreach (Control ctrl in EScoresUpperGroup.Controls) {
+                ctrl.Text = "0";
+            }
+            foreach (Control ctrl in EScoresLowerGroup.Controls) {
+                ctrl.Text = "0";
+            }
         }
 
         private void EDiceKeep1_CheckedChanged(object sender, EventArgs e) {
@@ -107,6 +120,10 @@ namespace YahtzeeGame {
                 }
                 if (EScoresLowerChanceButton.Enabled) {
                     EScoresLowerChance.Text = scores.ScoreSectionLower[YahtzeeScorecard.Lower.Chance].ToString();
+                }
+
+                if (!dice.CanRoll()) {
+                    EDiceRollButton.Enabled = false;
                 }
             }
         }
